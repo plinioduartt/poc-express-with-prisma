@@ -1,3 +1,4 @@
+import formatter, { formatOptionsType } from './formatter'
 
 const decimals: number = Number(process.env.DECIMALS) || 2
 const factorInitialDigit: string = '1'
@@ -23,6 +24,18 @@ class Currency {
    */
   private convertFloatToInteger (amount: number): number {
     return amount * factor
+  }
+
+  public get toBRL (): string {
+    const formatOptions: formatOptionsType = {
+      locale: 'pt-br',
+      style: 'currency',
+      currency: 'BRL'
+    }
+
+    const formattedValue: string = formatter(formatOptions)
+      .format(this._amount)
+    return formattedValue
   }
 
   public get value (): number {
