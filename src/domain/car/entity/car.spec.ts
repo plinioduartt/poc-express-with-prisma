@@ -1,12 +1,12 @@
 import { omit } from 'lodash'
-import formatter, { formatOptionsType } from '../../../_commons/currency/formatter'
-import TCreateCar from '../../_protocols/createCar'
+import formatter, { formatOptionsType } from '../../_commons/currency/formatter'
+import TCreateCar from '../_protocols/createCar'
 import Car from './car'
 
 describe('Car Entity', () => {
   test('It should create new car', () => {
     // arrange
-    const createSpy = jest.spyOn(Car, 'create')
+    const createSpy: jest.SpyInstance = jest.spyOn(Car, 'create')
     const data: TCreateCar = {
       name: 'Corsinha',
       color: 'Amarelo',

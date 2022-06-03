@@ -1,9 +1,9 @@
-import CarMapper from '../../../mappers/CarMapper'
-import Currency from '../../../_commons/currency/currency'
-import Entity from '../../../_commons/entity'
-import InvalidPropertiesException from '../../../_commons/error'
-import TIsValidInstance from '../../../_protocols/isValidInstance'
-import TCreateCar from '../../_protocols/createCar'
+import Currency from '../../_commons/currency/currency'
+import Entity from '../../_commons/entity'
+import InvalidPropertiesException from '../../_errors/InvalidPropertiesException'
+import TIsValidInstance from '../../_protocols/isValidInstance'
+import CarMapper from '../mapper/CarMapper'
+import TCreateCar from '../_protocols/createCar'
 
 export type TCar = {
   id?: string

@@ -1,6 +1,6 @@
-import { TCar } from '../car/entities/car/car'
-import TCreateCar from '../car/_protocols/createCar'
-import Currency from '../_commons/currency/currency'
+import Currency from '../../_commons/currency/currency'
+import { TCar } from '../entity/car'
+import TCreateCar from '../_protocols/createCar'
 
 class CarMapper {
   public createDtoToDomain (data: TCreateCar): TCar {
