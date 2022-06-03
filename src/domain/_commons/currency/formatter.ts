@@ -6,11 +6,11 @@ interface formatOptionsType {
   currency: string
 }
 
-const intlFormat = (formatOptions: formatOptionsType): Intl.NumberFormat => new Intl.NumberFormat(formatOptions.locale, {
+const formatter = (formatOptions: formatOptionsType): Intl.NumberFormat => new Intl.NumberFormat(formatOptions.locale, {
   style: formatOptions.style,
   currency: formatOptions.currency,
   minimumFractionDigits: decimals,
   maximumFractionDigits: decimals
 })
 
-export default intlFormat
+export default formatter
